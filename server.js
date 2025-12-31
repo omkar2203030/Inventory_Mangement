@@ -22,7 +22,7 @@ app.use(express.static("public"));
    MongoDB Connection
 ======================= */
 mongoose
-  .connect(process.env.url)
+  .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log("MongoDB connected successfully!");
     console.log("Mongoose connection is OPEN");
